@@ -26,7 +26,9 @@ class App extends Component {
                     <li>Tasks here 9</li>
                     <li>Tasks here 10</li>
                 </ol>
-                <UserInput changed={this.usernameChangedHandler}/>
+                <UserInput
+                    changed={this.usernameChangedHandler}
+                    currentName={this.state.username}/>
                 <UserOutput userName={this.state.username}/>
                 <UserOutput userName={this.state.username}/>
                 <UserOutput userName="Max"/>
