@@ -1,6 +1,7 @@
 import React, {Component, useState} from "react";
 import './App.css';
 import Person from "./Person/Person";
+import App from "./Assignment 1 Practice/App";
 
 class app extends Component {
     state = {
@@ -70,6 +71,11 @@ class app extends Component {
                 <Person
                     name={this.state.persons[2].name}
                     age={this.state.persons[2].age}/>
+
+
+
+                    {/*xxxxxxxxxxx   ASSIGNMENT 1 PRACTICE TIME=======================*/}
+                    <App />
             </div>
         );
         /*return  React.createElement('div', {className: 'App'},React.createElement('h1', null, "Does this work now?"));*/

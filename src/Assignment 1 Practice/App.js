@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
     render() {
@@ -16,6 +18,10 @@ class App extends Component {
                     <li>Tasks here 9</li>
                     <li>Tasks here 10</li>
                 </ol>
+                <UserInput/>
+                <UserOutput/>
+                <UserOutput/>
+                <UserOutput/>
             </div>
         );
     }
