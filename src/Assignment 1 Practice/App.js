@@ -3,6 +3,10 @@ import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
+    state = {
+      username: 'superMax'
+    };
+
     render() {
         return (
             <div className="App">
@@ -19,8 +23,8 @@ class App extends Component {
                     <li>Tasks here 10</li>
                 </ol>
                 <UserInput/>
-                <UserOutput userName="Max"/>
-                <UserOutput userName="Max"/>
+                <UserOutput userName={this.state.username}/>
+                <UserOutput userName={this.state.username}/>
                 <UserOutput userName="Max"/>
             </div>
         );
