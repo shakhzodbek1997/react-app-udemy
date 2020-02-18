@@ -1,6 +1,6 @@
 import React from "react";
 
-const userInput = () => {
-    return <input type="text" />;
+const userInput = (props) => {
+    return <input type="text" onChange={props.changed}/>;
 };
 export default userInput;

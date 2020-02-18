@@ -7,6 +7,10 @@ class App extends Component {
       username: 'superMax'
     };
 
+    usernameChangedHandler = (event)  =>{
+        this.setState({username: event.target.value});
+    };
+
     render() {
         return (
             <div className="App">
@@ -22,7 +26,7 @@ class App extends Component {
                     <li>Tasks here 9</li>
                     <li>Tasks here 10</li>
                 </ol>
-                <UserInput/>
+                <UserInput changed={this.usernameChangedHandler}/>
                 <UserOutput userName={this.state.username}/>
                 <UserOutput userName={this.state.username}/>
                 <UserOutput userName="Max"/>

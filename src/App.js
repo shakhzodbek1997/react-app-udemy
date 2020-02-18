@@ -47,7 +47,7 @@ class app extends Component {
 
         return (
             <div className="App">
-                <h1>Hi, I'm a React App!!!</h1>
+               {/* <h1>Hi, I'm a React App!!!</h1>
                 <p>This is really working!</p>
                 <button
                     className="test"
@@ -72,7 +72,7 @@ class app extends Component {
                     name={this.state.persons[2].name}
                     age={this.state.persons[2].age}/>
 
-
+*/}
 
                     {/*xxxxxxxxxxx   ASSIGNMENT 1 PRACTICE TIME=======================*/}
                     <App />
