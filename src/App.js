@@ -1,68 +1,65 @@
-import React, {useState} from "react";
+import React, {Component, useState} from "react";
 import './App.css';
 import Person from "./Person/Person";
 
-const app = props => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [personsState, setPersonState] = useState({
+class app extends Component {
+    state = {
         persons: [
             {name: 'Max', age: 28},
             {name: 'Manuel', age: 29},
             {name: 'Stephanie', age: 18}
-        ]
-    });
+        ],
+        otherState: 'some other value'
+    };
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [otherState, setotherstate] = useState('some other value');
-    console.log(personsState, otherState);
-
-    const switchNameHandler = () => {
+    switchNameHandler = (newName) => {
         // console.log('Was clicked!');
         // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
-        setPersonState({
+        this.setState({
             persons: [
-                {name: 'Maximilian', age: 28},
+                {name: newName, age: 28},
                 {name: 'Manuel', age: 29},
-                {name: 'Stephanie', age: 85}
+                {name: 'Stephanie', age: 27}
             ]
         })
 
     };
 
-    const nameChangedHandler = (event) => {
-        setPersonState({
+    /*nameChangedHandler = (event) => {
+        this.setState({
             persons: [
                 {name: 'Maximilian', age: 28},
                 {name: event.target.value, age: 29},
                 {name: 'Stephanie', age: 85}
             ]
         })
-    };
+    };*/
 
-    return (
-        <div className="App">
-            <h1>Hi, I'm a React App!!!</h1>
-            <p>This is really working!</p>
-            <button onClick={switchNameHandler}>Switch Name</button>
+    render() {
+        return (
+            <div className="App">
+                <h1>Hi, I'm a React App!!!</h1>
+                <p>This is really working!</p>
+                <button onClick={() => this.switchNameHandler('Maximilian!')}>Switch Name</button>
 
-            <Person
-                name={personsState.persons[0].name}
-                age={personsState.persons[0].age}
-                click={switchNameHandler} />
-            <Person
-                name={personsState.persons[1].name}
-                age={personsState.persons[1].age}
-                changed={nameChangedHandler}
 
-            >
-                My Hobbies: Racing
-            </Person>
-            <Person
-                name={personsState.persons[2].name}
-                age={personsState.persons[2].age}/>
-        </div>
-    );
-    /*return  React.createElement('div', {className: 'App'},React.createElement('h1', null, "Does this work now?"));*/
+                <Person
+                    name={this.state.persons[0].name}
+                    age={this.state.persons[0].age}
+                    click={this.state.switchNameHandler}/>
+
+                <Person
+                    name={this.state.persons[1].name}
+                    age={this.state.persons[1].age}
+                    click={this.switchNameHandler.bind(this, 'Max!!')}> My Hobbies: Racing</Person>
+
+                <Person
+                    name={this.state.persons[2].name}
+                    age={this.state.persons[2].age}/>
+            </div>
+        );
+        /*return  React.createElement('div', {className: 'App'},React.createElement('h1', null, "Does this work now?"));*/
+    }
 };
 
 export default app;
