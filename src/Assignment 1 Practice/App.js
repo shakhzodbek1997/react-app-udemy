@@ -19,9 +19,9 @@ class App extends Component {
                     <li>Tasks here 10</li>
                 </ol>
                 <UserInput/>
-                <UserOutput/>
-                <UserOutput/>
-                <UserOutput/>
+                <UserOutput userName="Max"/>
+                <UserOutput userName="Max"/>
+                <UserOutput userName="Max"/>
             </div>
         );
     }
