@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './App.css';
 import Person from "./Person/Person";
+import AppA2 from "./Assignment 2 Lists & conditionals/App-a2";
 
 class app extends Component {
     state = {
@@ -71,7 +72,9 @@ class app extends Component {
         }
 
         return (
-            <div className="App">
+
+            <AppA2/>
+            /*<div className="App">
                 <h1>Hi, I'm a React App!!!</h1>
                 <p>This is really working!</p>
                 <button
@@ -79,7 +82,7 @@ class app extends Component {
                     onClick={() => this.togglePersonsHandler()}> Toggle Persons
                 </button>
                 {persons}
-            </div>
+            </div>*/
         );
         /*return  React.createElement('div', {className: 'App'},React.createElement('h1', null, "Does this work now?"));*/
 
