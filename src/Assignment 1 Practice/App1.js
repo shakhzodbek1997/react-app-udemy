@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 
-class App extends Component {
+class App1 extends Component {
     state = {
       username: 'superMax'
     };
@@ -37,4 +37,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default App1;
