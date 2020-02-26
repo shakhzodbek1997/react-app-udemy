@@ -1,4 +1,5 @@
 import React from "react";
+import './Person.css'
 import '../App.css'
 import Radium from "radium";
 
