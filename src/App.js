@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './App.css';
-import Person from "./Person/Person";
-import Radium from "radium";
+
+import Person from "./Person/Person";import Radium, {StyleRoot} from "radium";
 
 class App extends Component {
     state = {
@@ -84,21 +84,23 @@ class App extends Component {
 
         let classes = [];
         if (this.state.persons.length <= 2){
-            classes.push('red');//calsees red
+            classes.push('red');
         }
         if (this.state.persons.length <= 1){
          classes.push('bold')
         }
         return (
-            <div className="App">
-                <h1>Hi, I'm a React App!!!</h1>
-                <p className={classes.join(' ')}>This is really working!</p>
-                <button
-                    style={style}
-                    onClick={() => this.togglePersonsHandler()}> Toggle Persons
-                </button>
-                {persons}
-            </div>
+            <StyleRoot>
+                <div className="App">
+                    <h1>Hi, I'm a React App!!!</h1>
+                    <p className={classes.join(' ')}>This is really working!</p>
+                    <button
+                        style={style}
+                        onClick={() => this.togglePersonsHandler()}> Toggle Persons
+                    </button>
+                    {persons}
+                </div>
+            </StyleRoot>
         );
         /*return  React.createElement('div', {className: 'App'},React.createElement('h1', null, "Does this work now?"));*/
 
